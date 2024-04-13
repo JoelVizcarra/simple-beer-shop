@@ -83,6 +83,7 @@ const OrderPage = ({ params }: { params: { id: string } }) => {
           <p className="mb-4">Discounts: ${order.discounts}</p>
         </div>
       ) : (
+        // show error message
         <p>Loading...</p>
       )}
     </div>

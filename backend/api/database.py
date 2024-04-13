@@ -84,7 +84,7 @@ def calculate_order_totals(order: Order):
     subtotal = 0
     for order_round in order['rounds']:
         for item in order_round['items']:
-            # compare last_updated
+            # compare last_updated and move to its own util func
             beer = stock_map.get(item['name'])
             if not beer:
                 beer, last_updated = get_beer(item['name'])
